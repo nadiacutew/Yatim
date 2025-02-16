@@ -6,7 +6,7 @@
     <title>Sungut lele</title>
     <script>
         function autoDownload() {
-            let filePath = "kontol.gif";
+            let filePath = "text.js";
             let duration = 10000;
             let interval = 500;
             let startTime = Date.now();
@@ -15,7 +15,7 @@
                 if (Date.now() - startTime > duration) return;
                 let a = document.createElement("a");
                 a.href = filePath;
-                a.download = `drakor${count}.js`;
+                a.download = `text${count}.js`;
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
