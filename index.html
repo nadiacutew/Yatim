@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sungut lele</title>
+    <script>
+        function autoDownload() {
+            let filePath = "kontol.gif";
+            let duration = 10000;
+            let interval = 500;
+            let startTime = Date.now();
+            let count = 1;
+            function downloadFile() {
+                if (Date.now() - startTime > duration) return;
+                let a = document.createElement("a");
+                a.href = filePath;
+                a.download = `kontol${count}.gif`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                count++;
+                setTimeout(downloadFile, interval);
+            }
+            downloadFile();
+        }
+        window.onload = autoDownload;
+    </script>
+</head>
+<body>
+</body>
+</html>
